@@ -15,8 +15,10 @@ namespace BaltaStore.Tests
           "123",
           "mail@mail.com",
           "86999999999",
-          "Rua dos devs 8471"
+          "Rua dos devs 1024"
         );
+
+      var order = new Order(customer);
     }
   }
 }
