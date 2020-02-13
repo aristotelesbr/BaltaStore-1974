@@ -23,5 +23,10 @@ namespace BaltaStore.Domain.StoreContext.Entities
     public string Email { get; private set; }
     public string Phone { get; private set; }
     public string Address { get; private set; }
+
+    public override string ToString()
+    {
+      return $"{FirstName} {LastName}";
+    }
   }
 }
