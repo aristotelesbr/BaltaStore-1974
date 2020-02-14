@@ -1,4 +1,4 @@
-namespace BaltaStore.Domain.StoreContext.Entities
+namespace BaltaStore.Domain.StoreContext.Enums
 {
   public enum EDeliveryStatus
   {

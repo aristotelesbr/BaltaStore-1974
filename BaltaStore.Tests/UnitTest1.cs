@@ -17,8 +17,6 @@ namespace BaltaStore.Tests
           "86999999999",
           "Rua dos devs 1024"
         );
-
-      var order = new Order(customer);
     }
   }
 }
