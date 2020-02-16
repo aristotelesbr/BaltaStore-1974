@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using BaltaStore.Domain.StoreContext.Enums;
 
 namespace BaltaStore.Domain.StoreContext.Entities
 {

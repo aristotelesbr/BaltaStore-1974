@@ -1,4 +1,5 @@
 using System;
+using BaltaStore.Domain.StoreContext.Enums;
 
 namespace BaltaStore.Domain.StoreContext.Entities
 {
@@ -8,7 +9,7 @@ namespace BaltaStore.Domain.StoreContext.Entities
     {
       CreateDate = DateTime.Now;
       EstimatedDeliveryDate = estimatedDeliveryDate;
-      Status = EDeliveryStatus.Waiting;
+      Status = Enums.EDeliveryStatus.Waiting;
     }
     public DateTime CreateDate { get; private set; }
     public DateTime EstimatedDeliveryDate { get; private set; }
