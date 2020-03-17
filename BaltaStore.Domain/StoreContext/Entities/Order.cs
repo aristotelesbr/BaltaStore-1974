@@ -38,6 +38,8 @@ namespace BaltaStore.Domain.StoreContext.Entities
       .Replace("-", "")
       .Substring(0, 8)
       .ToUpper();
+      if (_items.Count == 0)
+        AddNotification("Order", "Este pedido não possui itens.");
     }
 
     public void pay()
