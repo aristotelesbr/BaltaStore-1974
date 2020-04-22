@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using FluentValidator;
 
 namespace BaltaStore.Domain.StoreContext.Entities
@@ -14,6 +13,7 @@ namespace BaltaStore.Domain.StoreContext.Entities
       if (product.QuantityOnHand < quantity)
         AddNotification("Quantity", "Produto fora de estoque");
 
+      product.DescreaseQuantity(quantity);
     }
     public Product Product { get; private set; }
     public decimal Quantity { get; private set; }

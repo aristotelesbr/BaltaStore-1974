@@ -28,5 +28,10 @@ namespace BaltaStore.Domain.StoreContext.Entities
     {
       return Title;
     }
+
+    public void DescreaseQuantity(decimal quantity)
+    {
+      QuantityOnHand -= quantity;
+    }
   }
 }

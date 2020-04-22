@@ -8,6 +8,17 @@ namespace BaltaStore.Domain.StoreContext.Entities
   public class Customer : Notifiable
   {
     private readonly IList<Address> _addresses;
+    private Name name;
+    private Document document;
+    private Email email;
+
+    public Customer(Name name, Document document, Email email)
+    {
+      this.name = name;
+      this.document = document;
+      this.email = email;
+    }
+
     public Customer(
       Name name,
       Document document,

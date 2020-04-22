@@ -47,7 +47,7 @@ namespace BaltaStore.Domain.StoreContext.Entities
         AddNotification("Order", "Este pedido não possui itens.");
     }
 
-    public void pay()
+    public void Pay()
     {
       Status = EOrderStatus.Paid;
     }
@@ -55,21 +55,20 @@ namespace BaltaStore.Domain.StoreContext.Entities
     public void Ship()
     {
       var deliveries = new List<Delivery>();
-      deliveries.Add(new Delivery(DateTime.Now.AddDays(5)));
       var count = 1;
 
       foreach (var item in _items)
       {
         if (count == 5)
         {
-          count = 1;
+          count += 1;
           deliveries.Add(new Delivery(DateTime.Now.AddDays(5)));
         }
         count++;
       }
 
-      deliveries.ForEach(_delivery => _delivery.Ship());
-      deliveries.ForEach(_delivery => _deliveries.Add(_delivery));
+      deliveries.ForEach(dlv => dlv.Ship());
+      deliveries.ForEach(dlv => _deliveries.Add(dlv));
 
       var delivery = new Delivery(DateTime.Now.AddDays(5));
       _deliveries.Add(delivery);
